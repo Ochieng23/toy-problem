@@ -1,9 +1,11 @@
-function strCount(str,letter){
-
+function strCount(str) {
     if (str.length === 0) {
-        return [];
-      }
-   arrCount = str.split('').filter(c=> c==letter).length
-
-    return {str:str, arrCount:arrCount}
-}
+      return {};
+    }
+    const charCount = {};
+    str.split('').forEach((char) => {
+      charCount[char] = charCount[char] ? charCount[char] + 1 : 1;
+    });
+    return charCount;
+  }
+  strCount('abracadabra')
