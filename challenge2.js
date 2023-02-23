@@ -1,5 +1,9 @@
 function strCount(str,letter){
-   arrCount = str.split('').filter(c=> c==letter).length 
+
+    if (str.length === 0) {
+        return [];
+      }
+   arrCount = str.split('').filter(c=> c==letter).length
 
     return {str:str, arrCount:arrCount}
 }
